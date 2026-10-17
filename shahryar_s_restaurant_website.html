@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahryar's Restaurant & Banquet | Faisalabad</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#F3C668',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        },
+                        dark: {
+                            900: '#0F0E0E',
+                            800: '#181616',
+                            700: '#252222',
+                            600: '#332E2E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0F0E0E;
+            color: #E5E7EB;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE29F 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #4A3B10) 1;
+        }
+        .glass-card {
+            background: rgba(24, 22, 22, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card-hover {
+            transition: all 0.3s ease;
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0E0E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #332E2E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Top Info Bar -->
+    <div class="bg-dark-800 text-xs py-2 px-4 border-b border-white/5 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-gray-400">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i>Jail Road, Near Allied Hospital, Faisalabad</span>
+                <span><i class="fa-solid fa-clock text-gold-500 mr-2"></i>12:00 PM - 01:00 AM Daily</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:03457868377" class="hover:text-gold-400 transition"><i class="fa-solid fa-phone text-gold-500 mr-1"></i> 0345 7868377</a>
+                <span class="text-white/20">|</span>
+                <a href="https://www.facebook.com/shahryarsRestaurant/" target="_blank" class="hover:text-gold-400 transition"><i class="fa-brands fa-facebook-f"></i> 17K Followers</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-40 bg-dark-900/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full border-2 border-gold-500 flex items-center justify-center bg-dark-800 shadow-lg shadow-gold-500/10">
+                        <i class="fa-solid fa-crown text-gold-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text block leading-none">SHAHRYAR'S</span>
+                        <span class="text-[10px] tracking-[0.25em] text-gray-400 uppercase font-semibold block mt-1">Restaurant & Banquet</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                    <a href="#about" class="hover:text-gold-400 transition">About</a>
+                    <a href="#menu" class="hover:text-gold-400 transition">Menu</a>
+                    <a href="#direct-save" class="hover:text-gold-400 transition text-emerald-400 font-semibold"><i class="fa-solid fa-bolt mr-1"></i> Direct Discounts</a>
+                    <a href="#banquet" class="hover:text-gold-400 transition">Banquet & Events</a>
+                    <a href="#location" class="hover:text-gold-400 transition">Contact</a>
+                </div>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="https://wa.me/923457868377?text=Hi!%20I%20would%20like%20to%20order%20food%20or%20book%20a%20table." target="_blank" 
+                       class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-dark-900 font-bold px-5 py-2.5 rounded-full text-sm shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 transition flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Order</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Trigger -->
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-300 hover:text-gold-400 p-2 text-xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-dark-800 border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-white/5">About Us</a>
+            <a href="#menu" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-white/5">Interactive Menu</a>
+            <a href="#direct-save" class="block py-2 text-emerald-400 font-semibold border-b border-white/5">Direct Order Savings</a>
+            <a href="#banquet" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-white/5">Banquet & Events</a>
+            <a href="#location" class="block py-2 text-gray-300 hover:text-gold-400">Location & Contact</a>
+            <a href="https://wa.me/923457868377?text=Hi!%20I%20want%20to%20order%20food" target="_blank" 
+               class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl flex items-center justify-center space-x-2 mt-4 shadow-lg">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Order directly on WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[88vh] flex items-center justify-center py-16 px-4 overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-25 filter brightness-75 scale-105 transform transition duration-1000"
+             style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent z-0"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs sm:text-sm font-medium backdrop-blur-md">
+                <i class="fa-solid fa-utensils text-xs"></i>
+                <span>Royal Dining & Event Catering in Faisalabad</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+                Experience Flavors That <br>
+                <span class="gold-gradient-text italic font-normal">Feel Like Home</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg font-light leading-relaxed">
+                Served with a touch of royalty. From authentic Desi Handi & BBQ to lavish wedding receptions at Jail Road, Near Allied Hospital.
+            </p>
+
+            <!-- Savings Banner inside Hero -->
+            <div class="max-w-xl mx-auto bg-dark-800/90 border border-emerald-500/30 p-4 rounded-2xl flex items-center justify-between text-left space-x-3 shadow-xl backdrop-blur-md">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg flex-shrink-0">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Skip Foodpanda Extra Fees</p>
+                        <p class="text-sm font-bold text-white">Order Direct via WhatsApp & Get Priority Delivery!</p>
+                    </div>
+                </div>
+                <a href="#menu" class="hidden sm:block text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-3 py-2 rounded-lg transition whitespace-nowrap">
+                    View Menu
+                </a>
+            </div>
+
+            <!-- CTA Group -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <a href="https://wa.me/923457868377?text=Hi%20Shahryar%20Restaurant!%20I%20would%20like%20to%20order%20food." 
+                   target="_blank"
+                   class="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-xl shadow-emerald-900/30 transition flex items-center justify-center space-x-3 text-base">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Order Food Online Now</span>
+                </a>
+                <a href="#banquet" 
+                   class="w-full sm:w-auto px-8 py-4 bg-dark-700/80 hover:bg-dark-600 border border-gold-500/40 text-gold-400 hover:text-white font-semibold rounded-xl transition flex items-center justify-center space-x-2 text-base backdrop-blur-md">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <span>Book Banquet Hall</span>
+                </a>
+            </div>
+
+            <!-- Quick Metrics -->
+            <div class="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-white/10 text-center">
+                <div>
+                    <p class="font-serif text-2xl font-bold text-gold-400">17K+</p>
+                    <p class="text-xs text-gray-400">Facebook Community</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl font-bold text-gold-400">100%</p>
+                    <p class="text-xs text-gray-400">Fresh Halal Ingredients</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl font-bold text-gold-400">500+</p>
+                    <p class="text-xs text-gray-400">Banquet Capacity</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl font-bold text-gold-400">Fast</p>
+                    <p class="text-xs text-gray-400">Direct Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Order Direct Section (Pitching Value vs Foodpanda) -->
+    <section id="direct-save" class="py-16 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest block mb-2">Smart Ordering Advantage</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Why Order Directly From Our Website?</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Advantage 1 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border-emerald-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Save Commission Charges</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Third-party apps add high service fees and inflated menu prices. Ordering directly guarantees you get our genuine menu prices with no hidden app costs.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Direct Chef Instructions</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Want extra spice, extra raita, or specific dietary preparations? Communicate directly with our kitchen staff over WhatsApp without app bot delays.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border-purple-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Priority Hot Delivery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Our direct riders ensure your food is dispatched immediately upon cooking, keeping Karahis hot and Naans perfectly fresh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Food Menu Section -->
+    <section id="menu" class="py-20 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold-400 text-xs font-bold uppercase tracking-widest block mb-2">Authentic Taste</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Explore Our Menu</h2>
+                </div>
+                <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+                    Click "Order via WhatsApp" on any dish to pre-fill your order message directly to our kitchen counter.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex items-center space-x-2 sm:space-x-4 overflow-x-auto pb-4 mb-8 scrollbar-none">
+                <button onclick="filterMenu('all')" class="menu-tab active bg-gold-500 text-dark-900 font-bold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition">All Specials</button>
+                <button onclick="filterMenu('desi')" class="menu-tab bg-dark-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-sm whitespace-nowrap border border-white/10 transition">Desi Handi & Karahi</button>
+                <button onclick="filterMenu('bbq')" class="menu-tab bg-dark-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-sm whitespace-nowrap border border-white/10 transition">Barbecue & Seekh</button>
+                <button onclick="filterMenu('steaks')" class="menu-tab bg-dark-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-sm whitespace-nowrap border border-white/10 transition">Continental & Steaks</button>
+                <button onclick="filterMenu('beverages')" class="menu-tab bg-dark-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-sm whitespace-nowrap border border-white/10 transition">Beverages & Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menuGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="menu-item desi glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Special Mutton Karahi" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-gold-500 text-dark-900 font-bold text-xs px-2.5 py-1 rounded-full">Chef's Choice</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Shahryar Special Mutton Karahi</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 1,850 <span class="text-xs text-gray-400 font-sans">/ half kg</span></span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Cooked in pure butter with organic green chilies, fresh tomatoes, and homemade spices.</p>
+                    </div>
+                    <button onclick="orderDish('Shahryar Special Mutton Karahi', 'PKR 1,850')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item bbq glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="BBQ Platter" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Royal Mixed BBQ Platter</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 2,400</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Combination of Chicken Boti, Malai Tikka, Reshmi Kebab, and Fish Tikka served with Mint Raita.</p>
+                    </div>
+                    <button onclick="orderDish('Royal Mixed BBQ Platter', 'PKR 2,400')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item desi glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Chicken Handi" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Boneless Chicken Creamy Handi</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 1,450</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Tender boneless chicken cubes simmered in a velvet rich cream and cashew nut gravy.</p>
+                    </div>
+                    <button onclick="orderDish('Boneless Chicken Creamy Handi', 'PKR 1,450')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item steaks glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Beef Steak" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Mexican Mushroom Beef Steak</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 1,650</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Grilled fillet served with creamy mushroom pepper sauce, sautéed veggies, and mashed potatoes.</p>
+                    </div>
+                    <button onclick="orderDish('Mexican Mushroom Beef Steak', 'PKR 1,650')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- Item 5 -->
+                <item class="menu-item bbq glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80" alt="Reshmi Kebab" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Chicken Reshmi Kebab (4 pcs)</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 950</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Mouth-melting minced chicken kebab blended with aromatic spices, cream, and herbs.</p>
+                    </div>
+                    <button onclick="orderDish('Chicken Reshmi Kebab', 'PKR 950')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </item>
+
+                <!-- Item 6 -->
+                <div class="menu-item beverages glass-card rounded-2xl p-5 flex flex-col justify-between glass-card-hover">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Special Drink" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Shahryar Royal Mint Margarita</h3>
+                            <span class="text-gold-400 font-bold font-serif whitespace-nowrap">PKR 380</span>
+                        </div>
+                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Refreshing blend of fresh mint, sprite, black salt, and crushed lemon ice.</p>
+                    </div>
+                    <button onclick="orderDish('Shahryar Royal Mint Margarita', 'PKR 380')" 
+                            class="w-full py-2.5 bg-dark-700 hover:bg-emerald-600 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Order via WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banquet & Event Booking Section -->
+    <section id="banquet" class="py-20 bg-dark-800 relative overflow-hidden border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Text content -->
+                <div class="space-y-6">
+                    <span class="text-gold-400 text-xs font-bold uppercase tracking-widest block">Celebrations & Weddings</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+                        Host Your Grand Events at <span class="gold-gradient-text">Shahryar's Banquet</span>
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Whether it's a Barat, Walima, Mehendi, Birthday, or Corporate Dinner, our luxurious air-conditioned banquet facility on Jail Road provides top-tier decor and unforgettable catering.
+                    </p>
+
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>Seating capacity for up to 500+ guests</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>Customizable buffet menu packages (Desi, Continental, Chinese)</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>Dedicated VIP valet parking & generator back-up</span>
+                        </li>
+                    </ul>
+
+                    <!-- Quick Banquet Estimate Card -->
+                    <div class="p-4 rounded-xl bg-dark-900/80 border border-gold-500/20 space-y-3">
+                        <span class="text-xs text-gold-400 font-bold uppercase">Quick Event Inquiry</span>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-[11px] text-gray-400">Guests Count</label>
+                                <select id="guestCount" class="w-full bg-dark-700 text-white text-xs p-2 rounded-lg border border-white/10 focus:outline-none focus:border-gold-500">
+                                    <option value="50-100">50 - 100 Guests</option>
+                                    <option value="100-250">100 - 250 Guests</option>
+                                    <option value="250-500">250 - 500+ Guests</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-[11px] text-gray-400">Event Type</label>
+                                <select id="eventType" class="w-full bg-dark-700 text-white text-xs p-2 rounded-lg border border-white/10 focus:outline-none focus:border-gold-500">
+                                    <option value="Wedding / Barat">Wedding / Barat</option>
+                                    <option value="Walima / Reception">Walima / Reception</option>
+                                    <option value="Birthday / Party">Birthday / Party</option>
+                                    <option value="Corporate Dinner">Corporate Dinner</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button onclick="bookBanquetWhatsApp()" class="w-full py-2.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-dark-900 font-bold text-xs rounded-lg transition shadow-md flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Get Banquet Rate Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Gallery Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Banquet Decor" class="rounded-2xl h-64 w-full object-cover shadow-lg border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Event Table" class="rounded-2xl h-64 w-full object-cover shadow-lg border border-white/10 mt-6">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="py-20 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-gold-400 text-xs font-bold uppercase tracking-widest block mb-2">Visit Us</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Location & Contact Details</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Info Cards -->
+                <div class="space-y-4">
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm mb-1">Address</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">Jail Road, Near Allied Hospital, Faisalabad, Punjab, Pakistan.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm mb-1">Phone & WhatsApp</h4>
+                            <p class="text-gray-400 text-xs">0345 7868377</p>
+                            <span class="text-[10px] text-emerald-400 font-semibold block mt-1">Available 12 PM - 1 AM for orders</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm mb-1">Email</h4>
+                            <p class="text-gray-400 text-xs">shahryarsrestaurant@hotmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Location Visual Container -->
+                <div class="lg:col-span-2 glass-card rounded-2xl overflow-hidden p-2 relative min-h-[300px] flex flex-col justify-between">
+                    <!-- Map placeholder graphic -->
+                    <div class="w-full h-full min-h-[280px] bg-dark-700 rounded-xl relative overflow-hidden flex items-center justify-center text-center p-6" 
+                         style="background-image: radial-gradient(#332E2E 1px, transparent 1px); background-size: 16px 16px;">
+                        
+                        <div class="space-y-4 max-w-sm z-10">
+                            <div class="w-14 h-14 bg-gold-500/20 border border-gold-500 text-gold-400 rounded-full flex items-center justify-center mx-auto text-2xl animate-bounce">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <h3 class="text-white font-serif font-bold text-lg">Jail Road, Near Allied Hospital</h3>
+                            <p class="text-xs text-gray-400">Convenient central location in Faisalabad with ample parking.</p>
+                            
+                            <a href="https://maps.google.com/?q=Jail+Road+Allied+Hospital+Faisalabad" target="_blank"
+                               class="inline-flex items-center space-x-2 bg-dark-800 hover:bg-gold-500 hover:text-dark-900 text-gold-400 border border-gold-500/40 font-semibold text-xs px-4 py-2.5 rounded-xl transition">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                                <span>Open in Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-6">
+            <div class="flex items-center justify-center space-x-3">
+                <i class="fa-solid fa-crown text-gold-400 text-xl"></i>
+                <span class="font-serif text-xl font-bold tracking-wider gold-gradient-text">SHAHRYAR'S RESTAURANT</span>
+            </div>
+            <p class="text-xs text-gray-400 max-w-md mx-auto">
+                Delicious Pakistani, Barbecue, Steaks & Continental dishes cooked daily with passion.
+            </p>
+            <div class="flex justify-center space-x-6 text-gray-400 text-lg">
+                <a href="https://www.facebook.com/shahryarsRestaurant/" target="_blank" class="hover:text-gold-400 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/923457868377" target="_blank" class="hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="text-[11px] text-gray-500 border-t border-white/5 pt-6">
+                © Shahryar's Restaurant & Banquet, Faisalabad. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/923457868377?text=Hi!%20I%20want%20to%20place%20an%20order" 
+       target="_blank"
+       aria-label="Contact on WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-400 hover:scale-110 transition duration-300 flex items-center justify-center group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 text-xs font-bold">
+            Order via WhatsApp
+        </span>
+    </a>
+
+    <!-- Simple JavaScript for Interactive Functions -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menu Tab Filtering
+        function filterMenu(category) {
+            const tabs = document.querySelectorAll('.menu-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-gold-500', 'text-dark-900', 'font-bold');
+                tab.classList.add('bg-dark-800', 'text-gray-300');
+            });
+
+            event.target.classList.remove('bg-dark-800', 'text-gray-300');
+            event.target.classList.add('bg-gold-500', 'text-dark-900', 'font-bold');
+
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Send order pre-filled to WhatsApp
+        function orderDish(dishName, price) {
+            const phone = "923457868377";
+            const text = `Hi Shahryar's Restaurant! I would like to order: *${dishName}* (${price}). Please let me know the estimated delivery time to my address.`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${phone}?text=${encodedText}`, '_blank');
+        }
+
+        // Banquet Inquiry trigger
+        function bookBanquetWhatsApp() {
+            const guests = document.getElementById('guestCount').value;
+            const event = document.getElementById('eventType').value;
+            const phone = "923457868377";
+            const text = `Hi Shahryar's Banquet! I want to inquire about booking the banquet hall for a *${event}* with approximately *${guests}*. Please share available dates and menu packages.`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${phone}?text=${encodedText}`, '_blank');
+        }
+    </script>
+</body>
+</html>
