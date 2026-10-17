@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punjab Tikka Food Court - Factory Area, Faisalabad</title>
+    <title>Faseeha Exports & Trading Co. | B2B Textile Manufacturers & Exporters</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Outift & Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        tikka: {
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                        },
-                        flame: {
-                            500: '#eab308',
-                            600: '#ca8a04',
-                        },
-                        charcoal: {
-                            900: '#121212',
-                            800: '#1a1a1a',
-                            700: '#262626',
-                            600: '#333333',
-                        }
-                    },
                     fontFamily: {
-                        heading: ['"Outfit"', 'sans-serif'],
-                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        accent: {
+                            50: '#fbfbfa',
+                            100: '#f5f4f0',
+                            200: '#e7e5dd',
+                            800: '#383528',
+                            900: '#1c1a13',
+                        }
                     }
                 }
             }
@@ -42,736 +46,567 @@
     </script>
     <style>
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #121212;
-            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            -webkit-font-smoothing: antialiased;
         }
-        h1, h2, h3, h4, h5, .font-heading {
-            font-family: 'Outfit', sans-serif;
+        
+        .hairline-border {
+            border-color: rgba(255, 255, 255, 0.08);
         }
-        .flame-gradient-text {
-            background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        .hairline-border-b {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .card-glass {
-            background: rgba(26, 26, 26, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(249, 115, 22, 0.15);
+
+        .hairline-border-t {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .card-glass-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .hairline-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
         }
-        .card-glass-hover:hover {
-            border-color: rgba(249, 115, 22, 0.4);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(249, 115, 22, 0.25);
+
+        .hairline-card-hover {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .fire-badge {
-            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+
+        .hairline-card-hover:hover {
+            border-color: rgba(255, 255, 255, 0.22);
+            transform: translateY(-2px);
+            background: rgba(30, 41, 59, 0.5);
         }
-        /* Custom scrollbar */
+
+        /* Minimal scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #121212;
+            background: #020617;
         }
         ::-webkit-scrollbar-thumb {
-            background: #333333;
-            border-radius: 4px;
+            background: #334155;
+            border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #f97316;
+            background: #475569;
         }
     </style>
 </head>
-<body class="antialiased text-gray-200 bg-charcoal-900 selection:bg-tikka-500 selection:text-white">
+<body class="selection:bg-white selection:text-brand-950">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-tikka-700 via-tikka-600 to-flame-600 text-white text-xs py-2 px-4 shadow-md font-medium">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="bg-white text-tikka-700 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">Hot Offer</span>
-                <span class="truncate">🔥 Rahu Grilled Fish Deal only Rs. 1,499 | Flat 25% OFF Tawa Chatkhara!</span>
-            </div>
-            <a href="tel:03208608959" class="hidden sm:flex items-center space-x-1 hover:underline text-white font-bold whitespace-nowrap">
-                <i class="fa-solid fa-phone text-xs"></i>
-                <span>0320 8608959</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="sticky top-0 z-40 bg-charcoal-900/90 backdrop-blur-md border-b border-white/10">
+    <!-- Minimal Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-950/80 backdrop-blur-md hairline-border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo -->
-                <a href="#" class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-tikka-600 to-flame-500 flex items-center justify-center text-white shadow-lg shadow-tikka-600/30">
-                        <i class="fa-solid fa-fire-burner text-2xl"></i>
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Title -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-9 h-9 rounded bg-white text-brand-950 flex items-center justify-center font-bold text-base tracking-tighter transition-transform group-hover:scale-95">
+                        FE
                     </div>
                     <div>
-                        <span class="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-white block leading-tight">PUNJAB TIKKA</span>
-                        <span class="text-[10px] tracking-widest text-tikka-500 font-bold uppercase block">Food Court • Factory Area</span>
+                        <span class="text-sm font-semibold tracking-wider uppercase text-white block leading-none">FASEEHA EXPORTS</span>
+                        <span class="text-[10px] tracking-widest text-brand-400 font-mono block mt-1 uppercase">& Trading Co.</span>
                     </div>
                 </a>
 
-                <!-- Nav Links -->
-                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
-                    <a href="#deals" class="text-flame-500 hover:text-white transition"><i class="fa-solid fa-bolt mr-1"></i> Hot Deals</a>
-                    <a href="#menu" class="hover:text-tikka-500 transition">BBQ & Menu</a>
-                    <a href="#experience" class="hover:text-tikka-500 transition">Open-Air Dining</a>
-                    <a href="#banquet" class="hover:text-tikka-500 transition">Events (Rs. 999/Head)</a>
-                    <a href="#contact" class="hover:text-tikka-500 transition">Location</a>
-                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-wide text-brand-300">
+                    <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+                    <a href="#process" class="hover:text-white transition-colors">Production Process</a>
+                    <a href="#rfq" class="hover:text-white transition-colors">B2B Quotation</a>
+                    <a href="#specs" class="hover:text-white transition-colors">Standards</a>
+                </nav>
 
-                <!-- Right Action Buttons -->
-                <div class="flex items-center space-x-3">
-                    <!-- Cart Trigger Button -->
-                    <button onclick="toggleCartDrawer()" class="relative bg-charcoal-800 hover:bg-charcoal-700 text-white p-2.5 rounded-xl border border-white/10 transition">
-                        <i class="fa-solid fa-basket-shopping text-lg text-tikka-500"></i>
-                        <span id="cartBadge" class="absolute -top-1 -right-1 bg-tikka-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
-                    </button>
-
-                    <!-- Direct WhatsApp Order -->
-                    <a href="https://wa.me/923208608959?text=Hi!%20I%20want%20to%20place%20an%20order%20from%20Punjab%20Tikka%20Factory%20Area." target="_blank" 
-                       class="hidden sm:flex bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl text-xs sm:text-sm shadow-lg shadow-emerald-900/30 transition items-center space-x-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Order on WhatsApp</span>
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/923111699996?text=Hello%20Faseeha%20Exports,%20I%20would%20like%20to%20inquire%20about%20textile%20manufacturing%20services." 
+                       target="_blank" 
+                       class="hidden sm:inline-flex items-center space-x-2 bg-white text-brand-950 hover:bg-brand-100 font-medium text-xs px-4 py-2.5 rounded transition-all">
+                        <span>Direct B2B Inquiry</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                     </a>
 
-                    <!-- Mobile Menu Trigger -->
-                    <button id="mobileMenuBtn" class="lg:hidden text-gray-300 hover:text-tikka-500 p-2 text-xl focus:outline-none">
-                        <i class="fa-solid fa-bars"></i>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-brand-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-charcoal-800 border-b border-white/10 px-4 pt-2 pb-6 space-y-3 text-sm">
-            <a href="#deals" class="block py-2 text-flame-500 font-bold border-b border-white/5"><i class="fa-solid fa-bolt mr-2"></i> Special Deals</a>
-            <a href="#menu" class="block py-2 text-gray-300 hover:text-tikka-500 border-b border-white/5">Digital BBQ Menu</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-tikka-500 border-b border-white/5">Open-Air Food Court</a>
-            <a href="#banquet" class="block py-2 text-gray-300 hover:text-tikka-500 border-b border-white/5">Banquet Package (Rs. 999)</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-tikka-500">Address & Map</a>
-            <a href="https://wa.me/923208608959?text=Hi!%20I%20want%20to%20order" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl flex items-center justify-center space-x-2 mt-4">
-                <i class="fa-brands fa-whatsapp text-xl"></i>
-                <span>Direct WhatsApp Order</span>
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-900 border-b hairline-border px-6 py-6 space-y-4 text-xs font-medium">
+            <a href="#capabilities" class="block text-brand-300 hover:text-white py-1">Capabilities</a>
+            <a href="#process" class="block text-brand-300 hover:text-white py-1">Production Process</a>
+            <a href="#rfq" class="block text-brand-300 hover:text-white py-1">B2B Quotation</a>
+            <a href="#specs" class="block text-brand-300 hover:text-white py-1">Quality Standards</a>
+            <a href="https://wa.me/923111699996" target="_blank" class="block w-full text-center bg-white text-brand-950 font-semibold py-2.5 rounded mt-4">
+                Inquire via WhatsApp
             </a>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[85vh] flex items-center justify-center py-16 px-4 overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30 scale-105 filter brightness-50" 
-             style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1800&q=80');"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/80 to-transparent z-0"></div>
-
-        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
-            <!-- Badge -->
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-tikka-500/30 bg-charcoal-800/80 text-tikka-500 text-xs sm:text-sm font-semibold backdrop-blur-md">
-                <i class="fa-solid fa-location-dot text-flame-500"></i>
-                <span>Fatima Jinnah Road, Opposite Lyallpur Garden, Faisalabad</span>
-            </div>
-
-            <!-- Title -->
-            <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                Taste the Real Taste of <br>
-                <span class="flame-gradient-text">Pakistani Open-Air BBQ</span>
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg font-normal leading-relaxed">
-                Family-style BBQ, Charcoal Karahi & Chatkhara in an open-air food court setting. Fresh 100% Halal meat, live charcoal grilling, and instant fast delivery across Faisalabad.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="https://wa.me/923208608959?text=Hi!%20I%20would%20like%20to%20order%20food%20for%20delivery%20/%20takeaway." target="_blank" 
-                   class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-tikka-600 to-flame-600 hover:from-tikka-500 hover:to-flame-500 text-white font-bold rounded-2xl shadow-xl shadow-tikka-600/30 transition flex items-center justify-center space-x-3 text-base">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    <span>Order Food on WhatsApp</span>
-                </a>
-                <a href="#deals" class="w-full sm:w-auto px-8 py-4 bg-charcoal-800/90 hover:bg-charcoal-700 border border-white/20 text-white font-bold rounded-2xl transition flex items-center justify-center space-x-2 text-base backdrop-blur-md">
-                    <i class="fa-solid fa-fire text-flame-500"></i>
-                    <span>View Today's Deals</span>
-                </a>
-            </div>
-
-            <!-- Perks Strip -->
-            <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 text-left">
-                <div class="flex items-center space-x-3 bg-charcoal-800/40 p-3 rounded-xl border border-white/5">
-                    <i class="fa-solid fa-tree text-tikka-500 text-xl"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">Open-Air Seating</p>
-                        <p class="text-[10px] text-gray-400">Family Food Court</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3 bg-charcoal-800/40 p-3 rounded-xl border border-white/5">
-                    <i class="fa-solid fa-fire-flame-curved text-flame-500 text-xl"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">Live BBQ Grills</p>
-                        <p class="text-[10px] text-gray-400">100% Fresh Charcoal</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3 bg-charcoal-800/40 p-3 rounded-xl border border-white/5">
-                    <i class="fa-solid fa-motorcycle text-emerald-400 text-xl"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">Fast Home Delivery</p>
-                        <p class="text-[10px] text-gray-400">Direct to doorstep</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3 bg-charcoal-800/40 p-3 rounded-xl border border-white/5">
-                    <i class="fa-solid fa-percent text-purple-400 text-xl"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">0% App Markup</p>
-                        <p class="text-[10px] text-gray-400">Save foodpanda fees</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Deals Section (Prominently Highlighted) -->
-    <section id="deals" class="py-16 bg-charcoal-800/60 relative border-t border-b border-white/5">
+    <section class="pt-36 pb-20 md:pt-48 md:pb-28 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10">
-                <div>
-                    <span class="text-flame-500 font-bold text-xs uppercase tracking-widest block mb-1">Limited Time Special Deals</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Grand Offers & Combos</h2>
-                </div>
-                <span class="text-xs text-gray-400 mt-2 sm:mt-0"><i class="fa-solid fa-circle text-emerald-500 text-[8px] animate-pulse mr-1"></i> Active now at Factory Area branch</span>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Deal 1: Fish Deal -->
-                <div class="card-glass rounded-2xl p-6 relative overflow-hidden border-flame-500/40 flex flex-col justify-between">
-                    <div class="absolute -right-12 -top-12 w-32 h-32 bg-flame-500/10 rounded-full blur-2xl"></div>
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">SEASONAL HOT DEAL</span>
-                            <span class="text-flame-500 font-bold font-heading text-2xl">Rs. 1,499/-</span>
-                        </div>
-                        <h3 class="font-heading text-xl font-bold text-white mb-2">Rahu Grilled Fish Deal</h3>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-6">
-                            Fresh Rahu fish marinated in authentic Chatkhara spices, charcoal-grilled to perfection. Served with special mint raita, plum chutney, and fresh Naans.
-                        </p>
-                    </div>
-                    <button onclick="addToCart('Rahu Grilled Fish Deal', 1499)" 
-                            class="w-full py-3 bg-gradient-to-r from-tikka-600 to-flame-600 hover:from-tikka-500 hover:to-flame-500 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Add Deal to Order</span>
-                    </button>
+            <div class="max-w-4xl">
+                <!-- Location & Verification Tag -->
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-brand-900 border hairline-border mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span class="text-[11px] font-mono text-brand-300 uppercase tracking-wider">Makki Cloth Market, Faisalabad, Pakistan</span>
                 </div>
 
-                <!-- Deal 2: Opening Offer -->
-                <div class="card-glass rounded-2xl p-6 relative overflow-hidden border-tikka-500/40 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="bg-tikka-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">FLAT 25% OFF</span>
-                            <span class="text-tikka-500 font-bold font-heading text-2xl">FLAT 25% OFF</span>
-                        </div>
-                        <h3 class="font-heading text-xl font-bold text-white mb-2">Tawa Chatkhara & Malwaari Paratha</h3>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-6">
-                            Grand Opening Offer on spicy Tawa Chicken/Beef Chatkhara served piping hot with crispy layered Malwaari Parathas.
-                        </p>
-                    </div>
-                    <button onclick="addToCart('Tawa Chatkhara + Malwaari Paratha Deal', 850)" 
-                            class="w-full py-3 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Add Deal (Rs. 850 approx)</span>
-                    </button>
-                </div>
+                <!-- Main Minimal Headline -->
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-white leading-[1.08] mb-8">
+                    Precision Textile <br>
+                    <span class="font-semibold text-white">Manufacturing & Export</span>
+                </h1>
 
-                <!-- Deal 3: Event Banquet Deal -->
-                <div class="card-glass rounded-2xl p-6 relative overflow-hidden border-emerald-500/40 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="bg-emerald-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">BANQUET SPECIAL</span>
-                            <span class="text-emerald-400 font-bold font-heading text-xl">Rs. 999 <span class="text-xs text-gray-400">/head</span></span>
-                        </div>
-                        <h3 class="font-heading text-xl font-bold text-white mb-2">10-Dishes Grand Event Package</h3>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-6">
-                            Includes Welcome Drink, Chicken Biryani/Pulao, Chicken Handi, BBQ Seekh Kebab, Fresh Naan, Salad, Raita, Kheer/Halwa + Soft Drinks.
-                        </p>
-                    </div>
-                    <a href="#banquet" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-calculator"></i>
-                        <span>Calculate Event Price</span>
+                <!-- Subheading -->
+                <p class="text-base sm:text-lg text-brand-400 font-light leading-relaxed max-w-2xl mb-10">
+                    Integrated textile solutions from greige fabric sourcing to high-precision digital printing, embroidery, and full apparel stitching for global wholesale brands and importers.
+                </p>
+
+                <!-- CTA Actions -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#rfq" class="inline-flex items-center justify-center space-x-3 bg-white text-brand-950 hover:bg-brand-200 font-medium text-xs tracking-wider uppercase px-6 py-4 rounded transition-all">
+                        <span>Calculate B2B Estimate</span>
+                        <i data-lucide="calculator" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#capabilities" class="inline-flex items-center justify-center space-x-2 border hairline-border hover:bg-brand-900 text-brand-300 hover:text-white font-medium text-xs tracking-wider uppercase px-6 py-4 rounded transition-all">
+                        <span>View All Capabilities</span>
                     </a>
                 </div>
             </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="mt-20 pt-10 hairline-border-t grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="block text-2xl font-light text-white font-mono">4.3 / 5.0</span>
+                    <span class="text-xs text-brand-400 font-normal mt-1 block">Google Verified Rating (450+ Reviews)</span>
+                </div>
+                <div>
+                    <span class="block text-2xl font-light text-white font-mono">8 Core</span>
+                    <span class="text-xs text-brand-400 font-normal mt-1 block">In-House Production Capabilities</span>
+                </div>
+                <div>
+                    <span class="block text-2xl font-light text-white font-mono">100% Custom</span>
+                    <span class="text-xs text-brand-400 font-normal mt-1 block">Dyeing, Printing & Tailoring Specs</span>
+                </div>
+                <div>
+                    <span class="block text-2xl font-light text-white font-mono">Global Freight</span>
+                    <span class="text-xs text-brand-400 font-normal mt-1 block">FOB / CIF Export Shipments</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Digital Interactive Menu Section -->
-    <section id="menu" class="py-20 bg-charcoal-900">
+    <!-- Manufacturing Capabilities Section -->
+    <section id="capabilities" class="py-24 bg-brand-950 hairline-border-t">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-tikka-500 font-bold text-xs uppercase tracking-widest block mb-2">Fresh From The Grill</span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white">Punjab Tikka Menu</h2>
-                <p class="text-gray-400 text-xs sm:text-sm mt-3">Select items to build your direct WhatsApp delivery or takeaway order.</p>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-400 block mb-2">Full Production Spectrum</span>
+                    <h2 class="text-2xl sm:text-4xl font-light text-white">Integrated Manufacturing Capabilities</h2>
+                </div>
+                <p class="text-xs text-brand-400 max-w-sm mt-4 md:mt-0 font-light leading-relaxed">
+                    Operating directly from Faisalabad’s primary textile hub, we manage end-to-end manufacturing workflows with rigorous quality control.
+                </p>
             </div>
 
-            <!-- Category Filter Tabs -->
-            <div class="flex items-center justify-center space-x-2 sm:space-x-3 overflow-x-auto pb-4 mb-10 scrollbar-none">
-                <button onclick="filterCategory('all')" class="cat-tab active bg-gradient-to-r from-tikka-600 to-flame-600 text-white font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap transition">All Food</button>
-                <button onclick="filterCategory('bbq')" class="cat-tab bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap border border-white/10 transition">BBQ & Grills</button>
-                <button onclick="filterCategory('karahi')" class="cat-tab bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap border border-white/10 transition">Desi Karahi & Handi</button>
-                <button onclick="filterCategory('tawa')" class="cat-tab bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap border border-white/10 transition">Tawa Chatkhara</button>
-                <button onclick="filterCategory('fish')" class="cat-tab bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap border border-white/10 transition">Fish & BBQ Deals</button>
-            </div>
-
-            <!-- Menu Grid -->
-            <div id="menuContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Capabilities Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
-                <!-- Menu Item 1 -->
-                <div class="menu-card bbq card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 1. Greige Fabric -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80" alt="Special Chicken Tikka Boti" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-tikka-600 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-md uppercase">Must Try</span>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">01</span>
+                            <i data-lucide="layers" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Special Chicken Tikka Boti</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 480</span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Juicy charcoal-grilled chicken tender boti seasoned with red chili, lemon juice, and secret spices.</p>
+                        <h3 class="text-base font-medium text-white mb-2">Greige Fabric Sourcing</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Premium airjet and shuttleless loom cotton, lawn, linen, chiffon, and blended greige fabrics direct from mill looms.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Special Chicken Tikka Boti', 480)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">Lawn • Cotton • Linen</span>
                 </div>
 
-                <!-- Menu Item 2 -->
-                <div class="menu-card karahi card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 2. Customized Design -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Desi Ghee Mutton Karahi" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">02</span>
+                            <i data-lucide="pen-tool" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Desi Ghee Mutton Karahi</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 1,600 <span class="text-[10px] text-gray-400">/ half kg</span></span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Fresh mutton cooked in pure Desi Ghee over wok with green chilies, tomatoes, and ginger julienne.</p>
+                        <h3 class="text-base font-medium text-white mb-2">Customised Designing</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            In-house CAD textile design department specializing in repeat pattern generation, tech packs, and motif creation.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Desi Ghee Mutton Karahi (Half)', 1600)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">CAD • Vector • Repeats</span>
                 </div>
 
-                <!-- Menu Item 3 -->
-                <div class="menu-card tawa card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 3. High-Precision Embroidery -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Special Tawa Chicken Chatkhara" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">03</span>
+                            <i data-lucide="sparkles" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Special Tawa Chicken Chatkhara</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 750</span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Shredded tender chicken tossed on heavy iron flat grill with tangy spices and fresh lemon squeeze.</p>
+                        <h3 class="text-base font-medium text-white mb-2">High-Precision Embroidery</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Multi-head computerized schiffli, boring, seqin, cutwork, and thread embroidery on luxury fabric panels.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Special Tawa Chicken Chatkhara', 750)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">Schiffli • Sequin • Thread</span>
                 </div>
 
-                <!-- Menu Item 4 -->
-                <div class="menu-card bbq card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 4. Printing -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Beef Reshmi Kebab" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">04</span>
+                            <i data-lucide="printer" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Beef Reshmi Seekh Kebab (4pcs)</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 650</span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Smooth minced beef skewer kebab grilled over charcoal until soft and juicy.</p>
+                        <h3 class="text-base font-medium text-white mb-2">Rotary & Digital Printing</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            High-speed rotary screen printing alongside reactive pigment digital printing with colorfastness standards.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Beef Reshmi Seekh Kebab (4pcs)', 650)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">Rotary • Reactive • Pigment</span>
                 </div>
 
-                <!-- Menu Item 5 -->
-                <div class="menu-card fish card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 5. Dyeing -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Grilled Rahu Fish" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">05</span>
+                            <i data-lucide="droplet" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Charcoal Grilled Rahu Fish (1 KG)</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 1,499</span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Whole Rahu fish marinated in traditional Lahori spices and grilled live over charcoal.</p>
+                        <h3 class="text-base font-medium text-white mb-2">Custom Dyeing & Finishing</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Pantone-matched thermosol dyeing, soft-finish treatments, Mercerizing, and anti-shrink processing.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Charcoal Grilled Rahu Fish (1 KG)', 1499)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">Thermosol • Reactive • Mercerized</span>
                 </div>
 
-                <!-- Menu Item 6 -->
-                <div class="menu-card tawa card-glass rounded-2xl p-5 flex flex-col justify-between card-glass-hover">
+                <!-- 6. Zari -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
                     <div>
-                        <div class="relative h-44 rounded-xl overflow-hidden mb-4 bg-charcoal-800">
-                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Malwaari Paratha" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">06</span>
+                            <i data-lucide="gem" class="w-5 h-5 text-brand-300"></i>
                         </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-heading font-bold text-base text-white">Malwaari Layered Paratha</h3>
-                            <span class="text-flame-500 font-bold font-heading whitespace-nowrap">Rs. 120</span>
-                        </div>
-                        <p class="text-gray-400 text-xs line-clamp-2 mb-4">Ultra crisp, flaky, multi-layered flatbread fried to golden perfection on iron griddle.</p>
+                        <h3 class="text-base font-medium text-white mb-2">Zari & Artisanal Crafts</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Traditional tilla work, metallic thread embellishments, and artisanal handcrafted detailing for luxury formalwear.
+                        </p>
                     </div>
-                    <button onclick="addToCart('Malwaari Layered Paratha', 120)" class="w-full py-2.5 bg-charcoal-700 hover:bg-tikka-600 text-white font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-plus text-tikka-500"></i>
-                        <span>Add to Order</span>
-                    </button>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">Tilla • Metallic • Handcrafted</span>
+                </div>
+
+                <!-- 7. Stitching -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">07</span>
+                            <i data-lucide="scissors" class="w-5 h-5 text-brand-300"></i>
+                        </div>
+                        <h3 class="text-base font-medium text-white mb-2">Stitching & Tailoring</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Commercial cut-make-trim (CMT) stitched apparel lines for retail clothing brands, unstitched suit packaging, and custom sizing.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">CMT • Ready-to-Wear • Unstitched</span>
+                </div>
+
+                <!-- 8. Shipping -->
+                <div class="hairline-card p-6 rounded hairline-card-hover flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono text-xs text-brand-400">08</span>
+                            <i data-lucide="globe" class="w-5 h-5 text-brand-300"></i>
+                        </div>
+                        <h3 class="text-base font-medium text-white mb-2">Worldwide Shipping</h3>
+                        <p class="text-xs text-brand-400 font-light leading-relaxed">
+                            Comprehensive export handling including customs clearance, sea container logistics (FCL/LCL), and express air freight.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider">DHL • Sea Freight • Air Cargo</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Food Court Experience Section -->
-    <section id="experience" class="py-16 bg-charcoal-800/80 relative">
+    <!-- Interactive B2B Quotation Builder -->
+    <section id="rfq" class="py-24 bg-brand-900/40 hairline-border-t relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-tikka-500 font-bold text-xs uppercase tracking-widest block">Family Outdoor Dining</span>
-                    <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-                        Open-Air Food Court Experience in <span class="flame-gradient-text">Factory Area</span>
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-400 block">Instant RFQ Calculator</span>
+                    <h2 class="text-3xl sm:text-4xl font-light text-white leading-tight">
+                        Request a Custom <br>
+                        <span class="font-semibold">B2B Manufacturing Quote</span>
                     </h2>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Punjab Tikka Food Court brings families and food enthusiasts together in a vibrant, spacious outdoor setting. Enjoy fresh air, aromatic smoke from live charcoal pits, and warm hospitality.
+                    <p class="text-xs sm:text-sm text-brand-400 font-light leading-relaxed">
+                        Configure your order specifications below. Our system generates a direct, itemized production query sent directly to our master merchandiser (+92 311 1699996).
                     </p>
 
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-charcoal-900 border border-white/5">
-                            <div class="w-10 h-10 rounded-lg bg-tikka-600/20 text-tikka-500 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-people-roof"></i>
-                            </div>
+                    <div class="space-y-4 pt-4 border-t hairline-border">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
                             <div>
-                                <h4 class="text-white font-bold text-sm">Dedicated Family Seating</h4>
-                                <p class="text-gray-400 text-xs mt-1">Comfortable, clean, and private outdoor family dining arrangements.</p>
+                                <h4 class="text-xs font-medium text-white">Minimum Order Quantities (MOQ)</h4>
+                                <p class="text-[11px] text-brand-400 font-light">Flexible MOQs starting from 500 meters or 100 stitched sets.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-charcoal-900 border border-white/5">
-                            <div class="w-10 h-10 rounded-lg bg-flame-500/20 text-flame-500 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-drumstick-bite"></i>
-                            </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
                             <div>
-                                <h4 class="text-white font-bold text-sm">100% Halal & Fresh Meat</h4>
-                                <p class="text-gray-400 text-xs mt-1">Daily fresh slaughter meat marinated with natural herbs and spices without artificial colors.</p>
+                                <h4 class="text-xs font-medium text-white">Sample Swatch Yardage</h4>
+                                <p class="text-[11px] text-brand-400 font-light">Courier dispatch for fabric quality inspection available globally.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Food Court Seating" class="rounded-2xl shadow-xl border border-white/10 h-60 w-full object-cover">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Grill" class="rounded-2xl shadow-xl border border-white/10 h-60 w-full object-cover mt-6">
+                <!-- Right Form Box -->
+                <div class="lg:col-span-7">
+                    <div class="hairline-card p-6 sm:p-8 rounded border border-white/10 space-y-6">
+                        
+                        <!-- Step 1: Select Primary Service -->
+                        <div>
+                            <label class="block text-xs font-mono text-brand-300 uppercase tracking-wider mb-3">1. Primary Service Required</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="serviceSelector">
+                                <button type="button" onclick="selectService('Greige Fabric', 120)" class="service-btn active p-3 rounded border text-left text-xs transition-all border-white bg-white text-brand-950 font-medium">Greige Fabric</button>
+                                <button type="button" onclick="selectService('Digital Printing', 320)" class="service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white">Digital Printing</button>
+                                <button type="button" onclick="selectService('Embroidery Panel', 450)" class="service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white">Embroidery</button>
+                                <button type="button" onclick="selectService('Full Dyeing & Finish', 210)" class="service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white">Dyeing & Finish</button>
+                                <button type="button" onclick="selectService('Cut-Make-Stitch (CMT)', 580)" class="service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white">Full Stitching</button>
+                                <button type="button" onclick="selectService('Custom Export Order', 0)" class="service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white">Custom Package</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Volume & Specs -->
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono text-brand-300 uppercase tracking-wider mb-2">2. Estimated Quantity</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="number" id="quantityInput" value="1000" min="100" step="100" oninput="updateCalculator()" 
+                                           class="w-full bg-brand-950 border hairline-border text-white px-3 py-2.5 rounded text-xs focus:outline-none focus:border-white font-mono">
+                                    <span id="unitLabel" class="text-xs font-mono text-brand-400">Meters</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-mono text-brand-300 uppercase tracking-wider mb-2">3. Fabric / Fiber Base</label>
+                                <select id="fabricType" onchange="updateCalculator()" class="w-full bg-brand-950 border hairline-border text-white px-3 py-2.5 rounded text-xs focus:outline-none focus:border-white">
+                                    <option value="100% Premium Cotton Lawn">100% Premium Cotton Lawn</option>
+                                    <option value="Egyptian / Supima Cotton">Egyptian / Supima Cotton</option>
+                                    <option value="Pure Cambric / Slub Lawn">Pure Cambric / Slub Lawn</option>
+                                    <option value="Chiffon / Organza / Silk">Chiffon / Organza / Silk</option>
+                                    <option value="Polyester Blend / Twill">Polyester Blend / Twill</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Destination -->
+                        <div>
+                            <label class="block text-xs font-mono text-brand-300 uppercase tracking-wider mb-2">4. Buyer Shipping Destination</label>
+                            <input type="text" id="destinationInput" placeholder="e.g. Dubai (UAE), London (UK), Karachi, Dallas (USA)" 
+                                   class="w-full bg-brand-950 border hairline-border text-white px-3 py-2.5 rounded text-xs focus:outline-none focus:border-white">
+                        </div>
+
+                        <!-- Live Estimate Box -->
+                        <div class="p-4 rounded bg-brand-950 border hairline-border flex justify-between items-center">
+                            <div>
+                                <span class="text-[10px] font-mono text-brand-400 uppercase tracking-wider block">Estimated Production Base Cost</span>
+                                <span id="estimateDisplay" class="text-xl font-mono text-white font-semibold">PKR 120,000</span>
+                                <span class="text-[10px] text-brand-400 block mt-0.5">*Excluding freight & custom packaging tariffs</span>
+                            </div>
+                            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2.5 py-1 rounded">B2B Tier 1</span>
+                        </div>
+
+                        <!-- Action Submit -->
+                        <button onclick="sendRFQToWhatsApp()" class="w-full py-4 bg-white text-brand-950 hover:bg-brand-200 font-medium text-xs uppercase tracking-wider rounded transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Transmit Inquiry via WhatsApp (+92 311 1699996)</span>
+                        </button>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Banquet Calculator Section -->
-    <section id="banquet" class="py-20 bg-charcoal-900 border-t border-b border-white/5 relative">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">Banquet & Event Catering</span>
-            <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">10-Dishes Event Package (Rs. 999/Head)</h2>
-            <p class="text-gray-400 text-xs sm:text-sm max-w-2xl mx-auto mb-10">
-                Planning a Barat, Walima, Mehendi, or Family Reunion? Book Punjab Tikka Banquet with our transparent per-head rate calculator.
-            </p>
-
-            <div class="card-glass rounded-2xl p-6 sm:p-10 max-w-xl mx-auto text-left space-y-6">
-                <div>
-                    <label class="block text-xs text-gray-300 font-bold uppercase mb-2">Expected Number of Guests</label>
-                    <input type="number" id="banquetGuests" value="100" min="20" max="1000" oninput="calculateBanquetTotal()"
-                           class="w-full bg-charcoal-800 text-white font-heading font-bold text-lg p-3.5 rounded-xl border border-white/10 focus:outline-none focus:border-tikka-500">
-                </div>
-
-                <div class="p-4 rounded-xl bg-charcoal-800/80 border border-emerald-500/30 flex justify-between items-center">
-                    <div>
-                        <p class="text-[11px] text-gray-400">Package Rate Per Guest</p>
-                        <p class="text-sm font-bold text-white">Rs. 999 / Person</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-[11px] text-gray-400">Estimated Total</p>
-                        <p id="banquetTotalDisplay" class="text-xl font-heading font-extrabold text-emerald-400">Rs. 99,900</p>
-                    </div>
-                </div>
-
-                <ul class="text-xs text-gray-400 space-y-2 border-t border-white/5 pt-4">
-                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400"></i><span>10 Complete Dishes (Drink, Biryani, Handi, BBQ, Dessert & Soft Drinks)</span></li>
-                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Full hall decoration and catering staff included</span></li>
-                </ul>
-
-                <button onclick="bookBanquetWhatsApp()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl transition shadow-lg flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>Reserve Event Date via WhatsApp</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location & Contact Info -->
-    <section id="contact" class="py-16 bg-charcoal-800/50">
+    <!-- Production Specs & Quality Assurance -->
+    <section id="specs" class="py-24 bg-brand-950 hairline-border-t">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-3 gap-6">
-                
-                <div class="card-glass p-6 rounded-2xl flex items-start space-x-4">
-                    <div class="w-12 h-12 rounded-xl bg-tikka-600/20 text-tikka-500 flex items-center justify-center text-xl flex-shrink-0">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-heading font-bold text-white text-base">Location</h4>
-                        <p class="text-xs text-gray-300 mt-1 leading-relaxed">Fatima Jinnah Road, Opposite Lyallpur Garden - Factory Area, Faisalabad, Pakistan.</p>
-                    </div>
+            <div class="max-w-2xl mb-16">
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-400 block mb-2">Export Standards</span>
+                <h2 class="text-3xl font-light text-white">Quality Control & Technical Specifications</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-2">
+                    <span class="text-xs font-mono text-brand-400 block">01 / Fabric Testing</span>
+                    <h4 class="text-base font-medium text-white">Shrinkage & Colorfastness</h4>
+                    <p class="text-xs text-brand-400 font-light leading-relaxed">
+                        ISO standard crocking test (dry/wet rub), GSM density verification, and pre-shrunk mercerized finishing.
+                    </p>
                 </div>
 
-                <div class="card-glass p-6 rounded-2xl flex items-start space-x-4">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-heading font-bold text-white text-base">Direct Contact</h4>
-                        <p class="text-xs text-gray-300 mt-1">0320 8608959</p>
-                        <p class="text-[10px] text-emerald-400 font-semibold mt-1">WhatsApp active for orders & inquiries</p>
-                    </div>
+                <div class="space-y-2">
+                    <span class="text-xs font-mono text-brand-400 block">02 / Stitching Precision</span>
+                    <h4 class="text-base font-medium text-white">SPI & Seam Integrity</h4>
+                    <p class="text-xs text-brand-400 font-light leading-relaxed">
+                        12–14 Stitches Per Inch (SPI) standard on heavy-duty Juki lockstitch machinery with overlock reinforcement.
+                    </p>
                 </div>
 
-                <div class="card-glass p-6 rounded-2xl flex items-start space-x-4">
-                    <div class="w-12 h-12 rounded-xl bg-flame-500/20 text-flame-500 flex items-center justify-center text-xl flex-shrink-0">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-heading font-bold text-white text-base">Opening Hours</h4>
-                        <p class="text-xs text-gray-300 mt-1">01:00 PM - 02:00 AM Daily</p>
-                        <p class="text-[10px] text-gray-400 mt-1">Open-Air Dine-in • Takeaway • Delivery</p>
-                    </div>
+                <div class="space-y-2">
+                    <span class="text-xs font-mono text-brand-400 block">03 / Export Packaging</span>
+                    <h4 class="text-base font-medium text-white">Moisture-Proof Baling</h4>
+                    <p class="text-xs text-brand-400 font-light leading-relaxed">
+                        Poly-lined export cartons, bale pressing, barcoded SKU tagging, and palletized shipping ready for ocean transport.
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-charcoal-900 border-t border-white/5 py-10 text-center text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 space-y-4">
-            <p class="font-heading font-bold text-white text-sm">PUNJAB TIKKA FOOD COURT - FACTORY AREA</p>
-            <p class="text-gray-400">Fatima Jinnah Road Opposite Lyallpur Garden, Faisalabad | Tel: 0320 8608959</p>
-            <div class="flex justify-center space-x-4 text-base text-gray-400">
-                <a href="https://www.facebook.com/punjabtikkasst/" target="_blank" class="hover:text-tikka-500"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://wa.me/923208608959" target="_blank" class="hover:text-emerald-400"><i class="fa-brands fa-whatsapp"></i></a>
+    <footer class="bg-brand-950 hairline-border-t py-16 text-xs text-brand-400 font-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 hairline-border-b">
+                
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2 text-white font-medium text-sm">
+                        <div class="w-6 h-6 rounded bg-white text-brand-950 flex items-center justify-center font-bold text-xs">FE</div>
+                        <span>FASEEHA EXPORTS & TRADING CO.</span>
+                    </div>
+                    <p class="text-xs text-brand-400 font-light leading-relaxed">
+                        Textile Manufacturers & Exporters based in Makki Cloth Market, Faisalabad, Pakistan.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="text-xs font-mono text-white block mb-3 uppercase tracking-wider">Facility Address</span>
+                    <p class="text-brand-400 leading-relaxed">
+                        Makki Cloth Market (مکی کلاتھ مارکیٹ)<br>
+                        Faisalabad, Punjab, Pakistan
+                    </p>
+                </div>
+
+                <div>
+                    <span class="text-xs font-mono text-white block mb-3 uppercase tracking-wider">Direct Contact</span>
+                    <p class="text-brand-400 leading-relaxed">
+                        Tel: +92 311 1699996<br>
+                        WhatsApp: +92 311 1699996
+                    </p>
+                </div>
+
+                <div>
+                    <span class="text-xs font-mono text-white block mb-3 uppercase tracking-wider">Verification</span>
+                    <p class="text-brand-400 leading-relaxed">
+                        Google Verified Entity (4.3★)<br>
+                        NTN Registered Textile Exporter
+                    </p>
+                </div>
+
             </div>
-            <p class="text-[10px] pt-4">© Punjab Tikka Food Court. All rights reserved.</p>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-brand-500">
+                <p>© Faseeha Exports & Trading Co. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0 font-mono">Makki Cloth Market, Faisalabad</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Slide-over Order Cart Drawer -->
-    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
-        <div onclick="toggleCartDrawer()" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
-            <div class="w-screen max-w-md bg-charcoal-900 border-l border-white/10 p-6 flex flex-col justify-between text-white">
-                <div>
-                    <div class="flex items-center justify-between pb-4 border-b border-white/10">
-                        <h3 class="font-heading font-bold text-lg flex items-center space-x-2">
-                            <i class="fa-solid fa-bag-shopping text-tikka-500"></i>
-                            <span>Your WhatsApp Order</span>
-                        </h3>
-                        <button onclick="toggleCartDrawer()" class="text-gray-400 hover:text-white p-2">
-                            <i class="fa-solid fa-xmark text-xl"></i>
-                        </button>
-                    </div>
-
-                    <!-- Cart Item List -->
-                    <div id="cartItemsList" class="py-4 space-y-3 max-h-[50vh] overflow-y-auto">
-                        <p id="emptyCartText" class="text-gray-400 text-xs text-center py-8">Your order cart is currently empty. Click "+" on menu items to add!</p>
-                    </div>
-                </div>
-
-                <!-- Cart Footer & Checkout -->
-                <div class="border-t border-white/10 pt-4 space-y-4">
-                    <div>
-                        <label class="block text-[11px] text-gray-400 mb-1">Order Type</label>
-                        <select id="orderType" class="w-full bg-charcoal-800 text-xs p-2.5 rounded-xl border border-white/10 focus:outline-none">
-                            <option value="Home Delivery">Home Delivery</option>
-                            <option value="Takeaway / Pickup">Takeaway / Pickup</option>
-                            <option value="Open-Air Dine-in Booking">Open-Air Dine-in Booking</option>
-                        </select>
-                    </div>
-
-                    <div class="flex justify-between items-center text-sm font-bold">
-                        <span>Total Amount:</span>
-                        <span id="cartTotalDisplay" class="text-lg font-heading text-flame-500">Rs. 0</span>
-                    </div>
-
-                    <button onclick="sendCartToWhatsApp()" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Send Order on WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript State Logic -->
+    <!-- Logic -->
     <script>
-        // Interactive State
-        let cart = [];
+        // Lucide Icons initialization
+        lucide.createIcons();
 
         // Mobile Nav Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        // Menu Tab Filter
-        function filterCategory(cat) {
-            const tabs = document.querySelectorAll('.cat-tab');
-            tabs.forEach(t => {
-                t.classList.remove('bg-gradient-to-r', 'from-tikka-600', 'to-flame-600', 'text-white');
-                t.classList.add('bg-charcoal-800', 'text-gray-300');
-            });
+        // RFQ Calculator State
+        let selectedService = "Greige Fabric";
+        let baseUnitPrice = 120;
 
-            event.target.classList.remove('bg-charcoal-800', 'text-gray-300');
-            event.target.classList.add('bg-gradient-to-r', 'from-tikka-600', 'to-flame-600', 'text-white');
+        function selectService(serviceName, unitPrice) {
+            selectedService = serviceName;
+            baseUnitPrice = unitPrice;
 
-            const items = document.querySelectorAll('.menu-card');
-            items.forEach(item => {
-                if (cat === 'all' || item.classList.contains(cat)) {
-                    item.style.display = 'flex';
+            // Update UI buttons
+            const buttons = document.querySelectorAll('.service-btn');
+            buttons.forEach(btn => {
+                if(btn.innerText.includes(serviceName) || (serviceName === "Greige Fabric" && btn.innerText.includes("Greige"))) {
+                    btn.className = "service-btn active p-3 rounded border text-left text-xs transition-all border-white bg-white text-brand-950 font-medium";
                 } else {
-                    item.style.display = 'none';
+                    btn.className = "service-btn p-3 rounded border text-left text-xs transition-all hairline-border text-brand-300 hover:text-white";
                 }
             });
-        }
 
-        // Cart Drawer Toggle
-        function toggleCartDrawer() {
-            document.getElementById('cartDrawer').classList.toggle('hidden');
-        }
-
-        // Add item to cart
-        function addToCart(name, price) {
-            const existing = cart.find(i => i.name === name);
-            if(existing) {
-                existing.qty += 1;
+            // Update unit label
+            const unitLabel = document.getElementById('unitLabel');
+            if(serviceName.includes("Stitch") || serviceName.includes("Package")) {
+                unitLabel.innerText = "Pieces / Sets";
             } else {
-                cart.push({ name, price, qty: 1 });
+                unitLabel.innerText = "Meters";
             }
-            updateCartUI();
-            
-            // Auto open drawer on first add
-            if(cart.length === 1 && cart[0].qty === 1) {
-                toggleCartDrawer();
-            }
+
+            updateCalculator();
         }
 
-        // Remove / Decrease item
-        function removeFromCart(name) {
-            const item = cart.find(i => i.name === name);
-            if(item) {
-                item.qty -= 1;
-                if(item.qty <= 0) {
-                    cart = cart.filter(i => i.name !== name);
-                }
-            }
-            updateCartUI();
-        }
+        function updateCalculator() {
+            const qty = parseFloat(document.getElementById('quantityInput').value) || 0;
+            const totalEstimate = qty * baseUnitPrice;
 
-        // Update UI State
-        function updateCartUI() {
-            const list = document.getElementById('cartItemsList');
-            const badge = document.getElementById('cartBadge');
-            const totalDisplay = document.getElementById('cartTotalDisplay');
-
-            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-
-            if(totalQty > 0) {
-                badge.innerText = totalQty;
-                badge.classList.remove('hidden');
+            const display = document.getElementById('estimateDisplay');
+            if(baseUnitPrice === 0) {
+                display.innerText = "Custom Quote Required";
             } else {
-                badge.classList.add('hidden');
+                display.innerText = `PKR ${totalEstimate.toLocaleString()}`;
             }
-
-            if(cart.length === 0) {
-                list.innerHTML = `<p class="text-gray-400 text-xs text-center py-8">Your order cart is empty. Add delicious items from our menu!</p>`;
-            } else {
-                list.innerHTML = cart.map(item => `
-                    <div class="flex items-center justify-between p-3 rounded-xl bg-charcoal-800 border border-white/5">
-                        <div>
-                            <p class="text-xs font-bold text-white">${item.name}</p>
-                            <p class="text-[10px] text-tikka-500 font-bold">Rs. ${item.price} x ${item.qty}</p>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <button onclick="removeFromCart('${item.name}')" class="w-6 h-6 rounded bg-charcoal-700 text-white flex items-center justify-center text-xs font-bold">-</button>
-                            <span class="text-xs font-bold">${item.qty}</span>
-                            <button onclick="addToCart('${item.name}', ${item.price})" class="w-6 h-6 rounded bg-tikka-600 text-white flex items-center justify-center text-xs font-bold">+</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            totalDisplay.innerText = `Rs. ${totalPrice.toLocaleString()}`;
         }
 
-        // Format and send order to WhatsApp
-        function sendCartToWhatsApp() {
-            if(cart.length === 0) {
-                alert("Please add at least one item to your cart!");
-                return;
-            }
+        function sendRFQToWhatsApp() {
+            const qty = document.getElementById('quantityInput').value;
+            const unit = document.getElementById('unitLabel').innerText;
+            const fabric = document.getElementById('fabricType').value;
+            const destination = document.getElementById('destinationInput').value || "Not specified";
+            const estimate = document.getElementById('estimateDisplay').innerText;
 
-            const orderType = document.getElementById('orderType').value;
-            const phone = "923208608959";
-            
-            let itemListText = cart.map(i => `• ${i.name} (x${i.qty}) - Rs. ${i.price * i.qty}`).join('\n');
-            let totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const phone = "923111699996";
 
-            let msg = `*NEW ORDER - PUNJAB TIKKA FACTORY AREA*\n\n` +
-                      `*Order Type:* ${orderType}\n\n` +
-                      `*Items Order:* \n${itemListText}\n\n` +
-                      `*Total Amount:* Rs. ${totalPrice.toLocaleString()}\n\n` +
-                      `Please confirm my order and total estimated delivery time.`;
+            const message = 
+                `*B2B QUOTATION REQUEST - FASEEHA EXPORTS*\n\n` +
+                `*Service:* ${selectedService}\n` +
+                `*Quantity:* ${qty} ${unit}\n` +
+                `*Fabric Base:* ${fabric}\n` +
+                `*Destination:* ${destination}\n` +
+                `*Estimated Base Total:* ${estimate}\n\n` +
+                `Hello, I would like to confirm production lead times and receive a formal proforma invoice.`;
 
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        // Banquet calculation logic
-        function calculateBanquetTotal() {
-            const guests = parseInt(document.getElementById('banquetGuests').value) || 0;
-            const rate = 999;
-            const total = guests * rate;
-            document.getElementById('banquetTotalDisplay').innerText = `Rs. ${total.toLocaleString()}`;
-        }
-
-        function bookBanquetWhatsApp() {
-            const guests = document.getElementById('banquetGuests').value;
-            const rate = 999;
-            const total = guests * rate;
-            const phone = "923208608959";
-
-            let msg = `*BANQUET EVENT INQUIRY - PUNJAB TIKKA*\n\n` +
-                      `*Guests Count:* ${guests} Persons\n` +
-                      `*Package:* 10-Dishes Package (Rs. 999/head)\n` +
-                      `*Estimated Budget:* Rs. ${total.toLocaleString()}\n\n` +
-                      `Hi! I would like to check hall availability and menu details for an upcoming event.`;
-
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
 </body>
